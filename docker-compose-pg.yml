@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  pgsql:
+    image: bitnami/postgresql
+    ports:
+      - '5432:5432'
+    container_name: 'gympass-pgsql'
+    environment:
+      - POSTGRESQL_USERNAME=docker
+      - POSTGRESQL_PASSWORD=docker
+      - POSTGRESQL_DATABASE=gympass-db
